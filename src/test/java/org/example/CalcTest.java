@@ -1,20 +1,18 @@
 package org.example;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalcTest {
-
     @Test
-    public void testAdd() {
+    void testAdd() {
         Calc calc = new Calc();
-        assertEquals(5, calc.add(2,3));
+        assertEquals(3, calc.add(1,2));
     }
 
-    // 新增这个减法测试！
+    // 这个是故意失败的测试
     @Test
-    public void testSubtraction() {
+    void testSubFail() {
         Calc calc = new Calc();
-        assertEquals(2, calc.subtract(4,2));
+        assertEquals(5, calc.sub(10,7));
     }
 }
